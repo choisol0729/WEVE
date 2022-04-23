@@ -622,7 +622,7 @@ struct PointTabView: View {
         var request = URLRequest(url: actURL)
         request.httpMethod = "GET"
         request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
-        request.timeoutInterval = 20.0
+        request.timeoutInterval = 60.0
         URLSession.shared.dataTask(with: request){
             (data: Data?, response: URLResponse?, error: Error?) -> Void in
         }.resume()
