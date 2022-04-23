@@ -542,6 +542,8 @@ struct Ranker : Identifiable, Hashable, Codable {
 }
 
 struct PointTabView: View {
+    @State var url = "https://3nkue0cilb.execute-api.ap-northeast-2.amazonaws.com/dev/truffle-hackathon-dev-TruffleHackathon?value=25000000000000000000"
+    @State var apiKey = "241T3tRyRn99uD0q7b89v7whElC6GnU133bFBI7N"
     var rankers = [Ranker(id: 1, rank:1,name: "Hello"),Ranker(id: 2, rank:2,name: "James")]
     
     var body: some View {
@@ -557,6 +559,17 @@ struct PointTabView: View {
                     .padding()
                 
                 Spacer()
+                
+                Button(action: {
+                    Task{
+                        await sendCoinAWSLambda()
+                        print("Coin Sent!")
+                    }
+                }){
+                    Text("Coin Donation Lambda Test")
+                }
+                .padding()
+                .font(.title)
                 
                 Text("Good Story With WEVE")
                     .font(.title.bold())
@@ -593,12 +606,9 @@ struct PointTabView: View {
                     }
                 }
                 .padding()
-//                .position(x: UIScreen.main.bounds.width/2, y: 40)
             }
                     
         }
-<<<<<<< HEAD
-=======
         
     }
     
@@ -614,7 +624,6 @@ struct PointTabView: View {
             (data: Data?, response: URLResponse?, error: Error?) -> Void in
         }.resume()
         print("URL: " + url)
->>>>>>> parent of 1f129c4 (Time interval = 60.0)
     }
 }
 
