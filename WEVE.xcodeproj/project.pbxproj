@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		900CE9652812E75A005B0E21 /* WEVEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CE9642812E75A005B0E21 /* WEVEApp.swift */; };
+		900CE9672812E75A005B0E21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CE9662812E75A005B0E21 /* ContentView.swift */; };
+		900CE9692812E75A005B0E21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900CE9682812E75A005B0E21 /* Assets.xcassets */; };
+		900CE96E2812E75A005B0E21 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CE96D2812E75A005B0E21 /* Persistence.swift */; };
+		900CE9712812E75A005B0E21 /* WEVE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 900CE96F2812E75A005B0E21 /* WEVE.xcdatamodeld */; };
+		900CE99028130C23005B0E21 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CE98B28130C23005B0E21 /* Game.swift */; };
+		900CE99128130C23005B0E21 /* GameModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 900CE98C28130C23005B0E21 /* GameModel.json */; };
+		900CE99228130C23005B0E21 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CE98D28130C23005B0E21 /* GameList.swift */; };
+		900CE99328130C23005B0E21 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CE98E28130C23005B0E21 /* FavoritesView.swift */; };
+		900CE99428130C23005B0E21 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CE98F28130C23005B0E21 /* GameModel.swift */; };
+		900CE99728132EA2005B0E21 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 900CE99628132EA2005B0E21 /* SwiftUICharts */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		900CE9612812E75A005B0E21 /* WEVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WEVE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		900CE9642812E75A005B0E21 /* WEVEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WEVEApp.swift; sourceTree = "<group>"; };
+		900CE9662812E75A005B0E21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		900CE9682812E75A005B0E21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		900CE96D2812E75A005B0E21 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		900CE9702812E75A005B0E21 /* WEVE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WEVE.xcdatamodel; sourceTree = "<group>"; };
+		900CE98B28130C23005B0E21 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		900CE98C28130C23005B0E21 /* GameModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameModel.json; sourceTree = "<group>"; };
+		900CE98D28130C23005B0E21 /* GameList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		900CE98E28130C23005B0E21 /* FavoritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		900CE98F28130C23005B0E21 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		900CE95E2812E75A005B0E21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900CE99728132EA2005B0E21 /* SwiftUICharts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		900CE9582812E75A005B0E21 = {
+			isa = PBXGroup;
+			children = (
+				900CE9632812E75A005B0E21 /* WEVE */,
+				900CE9622812E75A005B0E21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		900CE9622812E75A005B0E21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				900CE9612812E75A005B0E21 /* WEVE.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		900CE9632812E75A005B0E21 /* WEVE */ = {
+			isa = PBXGroup;
+			children = (
+				900CE9642812E75A005B0E21 /* WEVEApp.swift */,
+				900CE9662812E75A005B0E21 /* ContentView.swift */,
+				900CE9682812E75A005B0E21 /* Assets.xcassets */,
+				900CE96D2812E75A005B0E21 /* Persistence.swift */,
+				900CE96F2812E75A005B0E21 /* WEVE.xcdatamodeld */,
+				900CE98E28130C23005B0E21 /* FavoritesView.swift */,
+				900CE98B28130C23005B0E21 /* Game.swift */,
+				900CE98D28130C23005B0E21 /* GameList.swift */,
+				900CE98C28130C23005B0E21 /* GameModel.json */,
+				900CE98F28130C23005B0E21 /* GameModel.swift */,
+			);
+			path = WEVE;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		900CE9602812E75A005B0E21 /* WEVE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900CE9742812E75A005B0E21 /* Build configuration list for PBXNativeTarget "WEVE" */;
+			buildPhases = (
+				900CE95D2812E75A005B0E21 /* Sources */,
+				900CE95E2812E75A005B0E21 /* Frameworks */,
+				900CE95F2812E75A005B0E21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WEVE;
+			packageProductDependencies = (
+				900CE99628132EA2005B0E21 /* SwiftUICharts */,
+			);
+			productName = WEVE;
+			productReference = 900CE9612812E75A005B0E21 /* WEVE.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		900CE9592812E75A005B0E21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					900CE9602812E75A005B0E21 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 900CE95C2812E75A005B0E21 /* Build configuration list for PBXProject "WEVE" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 900CE9582812E75A005B0E21;
+			packageReferences = (
+				900CE99528132EA2005B0E21 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
+			productRefGroup = 900CE9622812E75A005B0E21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				900CE9602812E75A005B0E21 /* WEVE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		900CE95F2812E75A005B0E21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900CE9692812E75A005B0E21 /* Assets.xcassets in Resources */,
+				900CE99128130C23005B0E21 /* GameModel.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		900CE95D2812E75A005B0E21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900CE9712812E75A005B0E21 /* WEVE.xcdatamodeld in Sources */,
+				900CE99228130C23005B0E21 /* GameList.swift in Sources */,
+				900CE99028130C23005B0E21 /* Game.swift in Sources */,
+				900CE96E2812E75A005B0E21 /* Persistence.swift in Sources */,
+				900CE99328130C23005B0E21 /* FavoritesView.swift in Sources */,
+				900CE99428130C23005B0E21 /* GameModel.swift in Sources */,
+				900CE9672812E75A005B0E21 /* ContentView.swift in Sources */,
+				900CE9652812E75A005B0E21 /* WEVEApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		900CE9722812E75A005B0E21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		900CE9732812E75A005B0E21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		900CE9752812E75A005B0E21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WEVE/Preview Content\"";
+				DEVELOPMENT_TEAM = 8YTHKH9JV2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solchoi.WEVE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		900CE9762812E75A005B0E21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WEVE/Preview Content\"";
+				DEVELOPMENT_TEAM = 8YTHKH9JV2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solchoi.WEVE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		900CE95C2812E75A005B0E21 /* Build configuration list for PBXProject "WEVE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900CE9722812E75A005B0E21 /* Debug */,
+				900CE9732812E75A005B0E21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		900CE9742812E75A005B0E21 /* Build configuration list for PBXNativeTarget "WEVE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900CE9752812E75A005B0E21 /* Debug */,
+				900CE9762812E75A005B0E21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		900CE99528132EA2005B0E21 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		900CE99628132EA2005B0E21 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900CE99528132EA2005B0E21 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		900CE96F2812E75A005B0E21 /* WEVE.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				900CE9702812E75A005B0E21 /* WEVE.xcdatamodel */,
+			);
+			currentVersion = 900CE9702812E75A005B0E21 /* WEVE.xcdatamodel */;
+			path = WEVE.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 900CE9592812E75A005B0E21 /* Project object */;
+}
