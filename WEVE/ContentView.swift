@@ -84,10 +84,6 @@ struct HomeTabView: View {
     var body: some View {
         VStack(){
             HStack(){
-                Button(action: {}){
-                    Image(systemName: "bell.fill")
-                }
-                
                 
                 Text("WEVE")
                     .fontWeight(.bold)
@@ -128,86 +124,83 @@ struct HomeTabView: View {
                 Divider()
                 
                 VStack{
-                    VStack (alignment: .leading){
-                        Text("Ranking")
-                            .font(.title)
-                            .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0))
-                        HStack(alignment:.center){
+                    ZStack(alignment:.leading){
+                        Image("ranking")
+                            .resizable()
+                            .frame(width: UIScreen.main.bounds.width,height:150)
+                        VStack(alignment: .leading){
                             ForEach(rankers) {ranker in
-                                
-                                VStack(alignment: .center){
-                                        Text(String(ranker.rank))
-                                            .frame(maxWidth: .infinity, alignment: .center)
-                                        Text(ranker.name)
-                                            .frame(maxWidth: .infinity, alignment: .center)
-                                    }
-                                    Divider()
-                                }
+                                Text(ranker.name)
+                                    .padding(EdgeInsets(top: 0, leading: 50, bottom: 5, trailing: 3))
+                                    .font(.system(size: 15))
+                            }.offset(y:22)
                         }
                         
-                        ZStack(alignment: .topLeading){
-                            
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(lineWidth: 3)
-                                .foregroundColor(Color.init(red: 150/255, green: 165/255, blue: 230/255))
-                                .frame(width: 350 ,height: 330)
-                                .padding()
-                            
-                            Text("")
-                                .padding()
-                            
-                            VStack{
-                                Text("Today")
+                    }
+                    
+                        
+                ZStack(alignment: .topLeading){
+                    
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(lineWidth: 3)
+                        .foregroundColor(Color.init(red: 150/255, green: 165/255, blue: 230/255))
+                        .frame(width: 350 ,height: 330)
+                        .padding()
+                    
+                    Text("")
+                        .padding()
+                    
+                    VStack{
+                        Text("Today")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        HStack{
+                            Image("todayGame1")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(10)
+                            VStack(alignment: .leading){
+                                Text("Crossy Roads")
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                HStack{
-                                    Image("todayGame1")
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                        .cornerRadius(10)
-                                    VStack(alignment: .leading){
-                                        Text("Crossy Roads")
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's")
-                                            .font(.system(size: 10))
-                                    }
-                                }.padding(.vertical, 5)
-                                
-                                Divider()
-                                
-                                HStack{
-                                    Image("todayGame2")
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                        .cornerRadius(10)
-                                    VStack(alignment: .leading){
-                                        Text("Geometry Dash")
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's")
-                                            .font(.system(size: 10))
-                                    }
-                                }.padding(.vertical, 5)
-                                
-                                Divider()
-                                
-                                HStack{
-                                    Image("todayGame3")
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                        .cornerRadius(10)
-                                    VStack(alignment: .leading){
-                                        Text("Candy Crush")
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's")
-                                            .font(.system(size: 10))
-                                    }
-                                }.padding(.bottom,10)
-                                
-                                
+                                Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's")
+                                    .font(.system(size: 10))
                             }
-                            .offset(x:5,y:5)
-                            .padding(30)
+                        }.padding(.vertical, 5)
                         
-                        }
+                        Divider()
+                        
+                        HStack{
+                            Image("todayGame2")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(10)
+                            VStack(alignment: .leading){
+                                Text("Geometry Dash")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's")
+                                    .font(.system(size: 10))
+                            }
+                        }.padding(.vertical, 5)
+                        
+                        Divider()
+                        
+                        HStack{
+                            Image("todayGame3")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(10)
+                            VStack(alignment: .leading){
+                                Text("Candy Crush")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's")
+                                    .font(.system(size: 10))
+                            }
+                        }.padding(.bottom,10)
+                        
+                        
+                    }
+                    .offset(x:5,y:5)
+                    .padding(30)
+                
                     }
                 }
             }
@@ -234,7 +227,8 @@ struct AccountTabView: View {
                             .frame(height: 100)
                         VStack(alignment: .leading){
                             Text("Point")
-                            Text("0 P").font(Font.body.bold())
+                            Text("0 P")
+                                .font(Font.body.bold())
                         }.padding(.leading, 20)
                     }
                 
@@ -259,7 +253,9 @@ struct AccountTabView: View {
                         VStack{
                             Text("Orderered")
                                 .padding(.bottom, 1)
-                            Text("0").font(Font.body.bold())
+                            Text("0")
+                                .font(Font.body.bold())
+                                .foregroundColor(Color.init(red: 150/255, green: 165/255, blue: 230/255))
                         }
                     }
                     
@@ -271,7 +267,9 @@ struct AccountTabView: View {
                         VStack{
                             Text("Review")
                                 .padding(.bottom, 1)
-                            Text("0").font(Font.body.bold())
+                            Text("0")
+                                .font(Font.body.bold())
+                                .foregroundColor(Color.init(red: 150/255, green: 165/255, blue: 230/255))
                         }
                     }
                     
@@ -284,7 +282,9 @@ struct AccountTabView: View {
                             Text("Inquiry")
                                 .multilineTextAlignment(.center)
                                 .padding(.bottom, 1)
-                            Text("0").font(Font.body.bold())
+                            Text("0")
+                                .font(Font.body.bold())
+                                .foregroundColor(Color.init(red: 150/255, green: 165/255, blue: 230/255))
                         }
                     }
                 }.font(.system(size: 13))
@@ -373,7 +373,7 @@ struct SearchTabView : View {
                Text("Recent History")
                    .padding(.vertical, 7)
                    .padding(.horizontal, 14)
-                   .font(.title)
+                   .font(.title.bold())
 
                Group {
 
@@ -420,14 +420,14 @@ struct SearchTabView : View {
             Text("Top Searched")
                 .padding(.vertical, 7)
                 .padding(.horizontal, 14)
-                .font(.title)
+                .font(.title.bold())
                
             Group {
 
                
             Text("1. Game name 1")
                 .font(.body)
-                .foregroundColor(Color(.blue))
+                .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                 .padding(.horizontal,14)
                 .padding(.vertical,4)
                 .cornerRadius(10)
@@ -438,7 +438,7 @@ struct SearchTabView : View {
                 
             Text("2. Game name 2")
                 .font(.body)
-                .foregroundColor(Color(.blue))
+                .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                 .padding(.horizontal,14)
                 .padding(.vertical,4)
                 .cornerRadius(10)
@@ -449,7 +449,7 @@ struct SearchTabView : View {
                     
             Text("3. Game name 3")
                 .font(.body)
-                .foregroundColor(Color(.blue))
+                .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                 .padding(.horizontal,14)
                 .padding(.vertical,4)
                 .cornerRadius(10)
@@ -460,7 +460,7 @@ struct SearchTabView : View {
                        
             Text("4. Game name 4")
                 .font(.body)
-                .foregroundColor(Color(.blue))
+                .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                 .padding(.horizontal,14)
                 .padding(.vertical,4)
                 .cornerRadius(10)
@@ -471,7 +471,7 @@ struct SearchTabView : View {
                         
             Text("5. Game name 5")
                 .font(.body)
-                .foregroundColor(Color(.blue))
+                .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                 .padding(.horizontal,14)
                 .padding(.vertical,4)
                 .cornerRadius(10)
@@ -488,7 +488,7 @@ struct SearchTabView : View {
                   
                Text("6. Game name 6")
                    .font(.body)
-                   .foregroundColor(Color(.blue))
+                   .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                    .padding(.horizontal,14)
                    .padding(.vertical,4)
                    .cornerRadius(10)
@@ -499,7 +499,7 @@ struct SearchTabView : View {
                    
                Text("7. Game name 7")
                    .font(.body)
-                   .foregroundColor(Color(.blue))
+                   .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                    .padding(.horizontal,14)
                    .padding(.vertical,4)
                    .cornerRadius(10)
@@ -510,7 +510,7 @@ struct SearchTabView : View {
                        
                Text("8. Game name 8")
                    .font(.body)
-                   .foregroundColor(Color(.blue))
+                   .foregroundColor(Color.init(red: 86/255, green: 123/255, blue: 255/255))
                    .padding(.horizontal,14)
                    .padding(.vertical,4)
                    .cornerRadius(10)
@@ -542,8 +542,6 @@ struct Ranker : Identifiable, Hashable, Codable {
 }
 
 struct PointTabView: View {
-    @State var apiKey = "241T3tRyRn99uD0q7b89v7whElC6GnU133bFBI7N"
-    @State var url = "https://3nkue0cilb.execute-api.ap-northeast-2.amazonaws.com/dev/truffle-hackathon-dev-TruffleHackathon?value=25000000000000000000"
     var rankers = [Ranker(id: 1, rank:1,name: "Hello"),Ranker(id: 2, rank:2,name: "James")]
     
     var body: some View {
@@ -560,31 +558,19 @@ struct PointTabView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    // HTTP Header send request
-                    Task {
-                        await sendCoinAWSLambda()
-                        print("Coin Sent!")
-                    }
-                }){
-                    Text("Coin Donate")
-                }
-                .padding()
-                .font(.title)
-                
                 Text("Good Story With WEVE")
-                    .font(.title)
+                    .font(.title.bold())
                     .padding(EdgeInsets(top: 30, leading: 15, bottom: 10, trailing: 0))
                 Image("donationAd")
                     .resizable()
                     .frame(width: UIScreen.main.bounds.width,height: 110)
+                    .cornerRadius(5)
                 
                 Text("Achievements")
-                    .font(.title)
+                    .font(.title.bold())
                     .padding(EdgeInsets(top: 30, leading: 15, bottom: 10, trailing: 0))
                 
                 HStack(alignment: .center){
-                    Spacer()
                     VStack (alignment: .center){
                         Image("achievement")
                             .resizable()
@@ -605,28 +591,12 @@ struct PointTabView: View {
                             .frame(width: 50, height: 50)
                         Text("Reach $ 10")
                     }
-                    Spacer()
                 }
                 .padding()
 //                .position(x: UIScreen.main.bounds.width/2, y: 40)
             }
                     
         }
-        
-    }
-    
-    func sendCoinAWSLambda() async {
-        guard let actURL = URL(string: url) else {
-            fatalError("Invalid ERROR")
-        }
-        var request = URLRequest(url: actURL)
-        request.httpMethod = "GET"
-        request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
-        request.timeoutInterval = 60.0
-        URLSession.shared.dataTask(with: request){
-            (data: Data?, response: URLResponse?, error: Error?) -> Void in
-        }.resume()
-        print("URL: " + url)
     }
 }
 
@@ -640,27 +610,35 @@ struct CategoryTabView: View {
             Text("Category")
                 .padding(.vertical, 7)
                 .padding(.horizontal,1)
-                .font(.largeTitle)
+                .font(.largeTitle.bold())
                 
                 Group{
                 
-                Button {
+                    HStack{
+                        
+                        Button {
                     
-                } label: {
-                    Text("RPG")
-                        .font(.title)
-                        .foregroundColor(Color.purple)
-                        .padding(.horizontal,15)
-                        .padding(.vertical,16)
-                        .cornerRadius(10)
-                }
+                        } label: {
+                            Image("1")
+                                .resizable()
+                                .frame(width: 50, height: 45)
+                            Text("Action")
+                                .font(.title.bold())
+                                .padding(.horizontal,15)
+                                .padding(.vertical,16)
+                                .cornerRadius(10)
+                        }
+                        
+                    }
              
                 Button {
                     
                 } label: {
-                    Text("Arcade")
-                        .font(.title)
-                        .foregroundColor(Color.purple)
+                    Image("2")
+                        .resizable()
+                        .frame(width: 50, height: 45)
+                    Text("Racing")
+                        .font(.title.bold())
                         .padding(.horizontal,15)
                         .padding(.vertical,16)
                         .cornerRadius(10)
@@ -669,8 +647,11 @@ struct CategoryTabView: View {
                 Button {
                     
                 } label: {
-            Text("Action")
-                .font(.title)
+                    Image("3")
+                        .resizable()
+                        .frame(width: 50, height: 45)
+                    Text("Puzzle / Board")
+                        .font(.title.bold())
                 .padding(.horizontal,15)
                 .padding(.vertical,16)
                 .cornerRadius(10)
@@ -679,9 +660,11 @@ struct CategoryTabView: View {
             Button {
                     
             } label: {
-                    
-            Text("Shooting")
-                .font(.title)
+                Image("4")
+                    .resizable()
+                    .frame(width: 50, height: 45)
+                Text("Shooting")
+                    .font(.title.bold())
                 .padding(.horizontal,15)
                 .padding(.vertical,16)
                 .cornerRadius(10)
@@ -691,9 +674,11 @@ struct CategoryTabView: View {
             Button {
                     
             } label: {
-                    
-                Text("Puzzle")
-                    .font(.title)
+                Image("5")
+                    .resizable()
+                    .frame(width: 50, height: 45)
+                Text("Adventure")
+                    .font(.title.bold())
                     .padding(.horizontal,15)
                     .padding(.vertical,16)
                     .cornerRadius(10)
@@ -702,9 +687,11 @@ struct CategoryTabView: View {
             Button {
                     
             } label: {
-                    
+                Image("6")
+                    .resizable()
+                    .frame(width: 50, height: 45)
                 Text("Strategy")
-                    .font(.title)
+                    .font(.title.bold())
                     .padding(.horizontal,15)
                     .padding(.vertical,16)
                     .cornerRadius(10)
@@ -713,8 +700,11 @@ struct CategoryTabView: View {
                 Button {
                     
                 } label: {
-                    Text("Casual")
-                    .font(.title)
+                    Image("7")
+                        .resizable()
+                        .frame(width: 50, height: 45)
+                    Text("Sports")
+                        .font(.title.bold())
                     .padding(.horizontal,15)
                     .padding(.vertical,16)
                     .cornerRadius(10)
@@ -723,8 +713,11 @@ struct CategoryTabView: View {
                 Button {
                     
                 } label: {
-                    Text("Racing")
-                    .font(.title)
+                    Image("8")
+                        .resizable()
+                        .frame(width: 50, height: 45)
+                    Text("Casual")
+                        .font(.title.bold())
                     .padding(.horizontal,15)
                     .padding(.vertical,16)
                     .cornerRadius(10)
@@ -739,6 +732,7 @@ struct CategoryTabView: View {
        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
