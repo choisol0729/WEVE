@@ -597,6 +597,24 @@ struct PointTabView: View {
             }
                     
         }
+<<<<<<< HEAD
+=======
+        
+    }
+    
+    func sendCoinAWSLambda() async {
+        guard let actURL = URL(string: url) else {
+            fatalError("Invalid ERROR")
+        }
+        var request = URLRequest(url: actURL)
+        request.httpMethod = "GET"
+        request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
+        request.timeoutInterval = 20.0
+        URLSession.shared.dataTask(with: request){
+            (data: Data?, response: URLResponse?, error: Error?) -> Void in
+        }.resume()
+        print("URL: " + url)
+>>>>>>> parent of 1f129c4 (Time interval = 60.0)
     }
 }
 
